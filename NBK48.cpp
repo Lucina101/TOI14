@@ -14,9 +14,6 @@ int main(){
         q[i]={x,i};
     }
     sort(q+1,q+1+t);
-  /*  for(int i=1;i<=t;i++){
-        printf("%d %d\n",a[i].first,a[i].second);
-    }*/
     int pt=n;
     for(int i=t;i>=1;i--){
         while(q[i].first<sum[pt])
