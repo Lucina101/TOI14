@@ -43,14 +43,7 @@ int main(){
         for(int j=1;j<=n;j++){
             if(a[i][j]){
         if(a[i+1][j]==1&&a[i][j+1]==1&&a[i+1][j+1]==1&&a[i-1][j]==0&&a[i][j-1]==0&&a[i-1][j+1]==0&&a[i+1][j-1]==0){
-            ll=0;
-            for(int k=i;a[k][j]!=0;k++){
-                a[k][j]=0,ll++;
-            }
-            for(int k=i;k<=i+ll;k++){
-                for(int l=j;l<=j+ll;l++){
-                    a[k][l]=0;
-                }
+            dfs(i,j);
             }
         sq++;
         }
