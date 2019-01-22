@@ -4,7 +4,7 @@ int t,q,m,u,v;
 struct pa{
 int a;
 int b;
-bool operator <(const pa x)const{
+bool operator <( const pa x)const{
     if(a!=x.a)
     return a<x.a;
     return b<x.b;
@@ -16,7 +16,7 @@ void tree(int x){
     vector<pa> e;
     for(int i=1;i<m;i++){
     scanf("%d %d",&u,&v);
-    u>v?swap(u,v):;
+    if(u>v) swap(u,v);
     e.push_back({u,v});
     }
     sort(e.begin(),e.end());
@@ -29,10 +29,8 @@ void tree(int x){
 }
 int main(){
     scanf("%d %d",&t,&q);
-    for(int r=0;r<t;r++){
+    for(int r=0;r<t;r++)
         tree(1);
-    }
-    for(int r=0;r<q;r++){
+    for(int r=0;r<q;r++)
         tree(2);
-    }
 }
