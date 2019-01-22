@@ -2,17 +2,7 @@
 #include<math.h>
 int n,m,sq,di,tri,ll,ct,f;
 char s[2010];
-bool a[10010][2010];
-void print(){
-    printf("\n");
-    for(int i=1;i<=m;i++){
-        for(int j=1;j<=n;j++){
-            printf("%d",a[i][j]);
-            }
-            printf("\n");
-    }
-    printf("\n");
-}
+bool a[2010][2010];
 void dfs(int x,int y){
     a[x][y]=0;
     ct++;
