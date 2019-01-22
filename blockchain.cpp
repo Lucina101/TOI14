@@ -16,10 +16,8 @@ void tree(int x){
     vector<pa> e;
     for(int i=1;i<m;i++){
     scanf("%d %d",&u,&v);
-    if(u<v)
+    u>v?swap(u,v):;
     e.push_back({u,v});
-    else
-    e.push_back({v,u});
     }
     sort(e.begin(),e.end());
     if(x==1){
