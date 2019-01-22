@@ -5,29 +5,23 @@ struct pa{
 int a;
 int b;
 bool operator <(const pa x)const{
+    if(a!=x.a)
     return a<x.a;
+    return b<x.b;
 }
 };
 map<vector<pa>,int> f;
 void tree(int x){
     scanf("%d ",&m);
-    vector<int> a[m+3];
+    vector<pa> e;
     for(int i=1;i<m;i++){
     scanf("%d %d",&u,&v);
     if(u<v)
-    a[u].push_back(v);
+    e.push_back({u,v});
     else
-    a[v].push_back(u);
+    e.push_back({v,u});
     }
-    for(int i=0;i<=m+1;i++){
-            sort(a[i].begin(),a[i].end());
-        }
-    vector<pa> e;
-    for(int i=0;i<=m+1;i++){
-        for(int j=0;j<a[i].size();j++){
-                e.push_back({i,a[i][j]});
-            }
-        }
+    sort(e.begin(),e.end());
     if(x==1){
         f[e]++;
     }
