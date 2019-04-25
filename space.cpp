@@ -4,20 +4,11 @@ int n,m,sq,di,tri,ll,ct,f;
 char s[2010];
 bool a[2010][2010];
 void dfs(int x,int y){
-    a[x][y]=0;
-    ct++;
-    if(a[x+1][y]){
-        dfs(x+1,y);
-    }
-    if(a[x-1][y]){
-        dfs(x-1,y);
-    }
-    if(a[x][y+1]){
-        dfs(x,y+1);
-    }
-    if(a[x][y-1]){
-        dfs(x,y-1);
-    }
+    a[x][y]=0;ct++;
+    if(a[x+1][y])dfs(x+1,y);
+    if(a[x-1][y])dfs(x-1,y);
+    if(a[x][y+1])dfs(x,y+1);
+    if(a[x][y-1])dfs(x,y-1);
     return;
 }
 
